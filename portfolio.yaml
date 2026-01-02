@@ -1,0 +1,73 @@
+as_of: 2026-01-02
+base_currency: USD
+
+allocation:
+  risk_assets: 60
+  defensive_assets: 40
+
+risk_assets:
+  value_dividend: 20
+  growth: 30
+  crypto: 10
+
+defensive_assets:
+  bonds: 30
+  cash: 10
+
+positions:
+  # Value / Dividend
+  - name: SCHD
+    type: ETF
+    category: value_dividend
+    region: US
+    weight_pct: 15
+    shares: 49
+
+  - name: VZ
+    type: equity
+    category: value_dividend
+    region: US
+    weight_pct: 5
+    shares: 8
+
+  # Growth
+  - name: QQQM
+    type: ETF
+    category: growth
+    region: US
+    weight_pct: 20
+    shares: 7
+
+  - name: TSM
+    type: equity
+    category: growth
+    region: US
+    weight_pct: 10
+    shares: 3
+
+  # Crypto
+  - name: Bitcoin
+    type: crypto
+    category: crypto
+    weight_pct: 10
+    amount: 0.00749184
+
+  # Defensive
+  - name: TLT
+    type: ETF
+    category: bonds
+    region: US
+    weight_pct: 30
+    shares: 23
+
+  - name: Cash
+    type: cash
+    category: cash
+    weight_pct: 10
+    amount_usd: 615.31
+
+rules:
+  notes:
+    - 포트폴리오는 올웨더 기반 + 성장 위성 전략
+    - 멘토 판단 시 비중 변경 여지 고려 필요
+
